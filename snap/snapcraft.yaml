@@ -1,17 +1,18 @@
-name: test-helloworld-warosaurus
+name: test-helloworld
 version: git
 summary: Test
 description: |
   Test Hello World in python.
-confinement: devmode
 base: core18
+confinement: strict
+grade: stable
+
 parts:
-  test-helloworld-warosaurus:
+  test-helloworld:
     plugin: python
     python-version: python3
     source: .
-    stage-packages:
 
 apps:
-  test-helloworld-warosaurus:
-    command: bin/
+  test-helloworld:
+    command: helloworld
